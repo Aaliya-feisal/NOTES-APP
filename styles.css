@@ -1,21 +1,107 @@
 *{
-    
     margin: 0;
     padding: 0;
     font-family: 'poppins', sans-serif;
     box-sizing: border-box;
 }
-.container{
-width: 100%;
-min-height:100vh;
-padding: 10px;
-background-color: rgb(195, 118, 118);
+body{
+    background-color: #c37676;
 }
-.note{
-    width: 100%;
-    max-width: 80%;
-    background-color: white;
-    margin: 100px auto 20px;
-    padding: 40px 30px 70px;
-    border-radius: 10px;
+.container{
+margin: 50px;
+display: grid;
+gap: 8px;
+grid-template-columns: repeat(auto-fill, 265px);
+}
+.container li{
+    background: white;
+    list-style: none;
+    height: 250px;
+    border-radius: 5px;
+    padding: 15px 20px 20px;
+}
+.add-note, .icon, .bottom-content, .settings .menu li{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.container .note{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.add-note .icon{
+    border: 2px dashed #c37676;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    font-size: 40px;
+    color: #c37676;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.add-note p{
+    color:#c37676;
+    font-weight: 500;
+}
+.add-note{
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.note span{
+    color: #575757;
+    font-size: 16px;
+    display: block;
+    margin-top: 15px;
+
+}
+.note .bottom-content{
+    border-top: 1px solid  #ccc;
+    padding-top: 10px;
+    
+}
+.bottom-content span{
+    color: #6d6d6d;
+    font-size: 14px;
+}
+.bottom-content .settings i{
+    color: #6d6d6d;
+    font-size: 14px;
+    cursor: pointer;
+}
+.settings{
+    position: relative;
+}
+.settings .menu{
+    bottom: 0;
+    position: relative;
+    padding: 5px 0;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgb(0, 0, 0,0.15);
+    right: -5px;
+    /* transform: scale(0); */
+    /* transition:transform 0.2s ease; */
+
+}
+/* .settings:hover .menu{
+    /* transform: scale(1);
+ } */
+
+.settings .menu li{
+    height: 25px;
+    border-radius: 0;
+    justify-content:  flex-start;
+    cursor: pointer;
+    font-size: 16px;
+    /* padding: 17px 15px; */
+  
+}
+.menu li:hover{
+    background: #f5f5f5;
+}
+.menu li i{
+padding-right: 8px;
+
 }
